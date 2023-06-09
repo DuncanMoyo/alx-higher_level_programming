@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 
-def reverse_alphabet():
-    for i in range(ord('z'), ord('a') - 1, -1):
-        if (i % 2 == 0):
-            print(chr(i), end="")
-        else:
-            print(chr(i).upper(), end="")
-
-if __name__ == "__main__":
-    reverse_alphabet()
+for i in range(122, 96, -1):
+    if i % 2 == 0:
+        i = chr(i)
+    else:
+        i = chr(i - 32)
+    print("{}".format(i), end="")
