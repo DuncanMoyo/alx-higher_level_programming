@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
-function add(a, b) {
-	if (isNaN(a) || isNaN(b)) {
-		console.log('NaN');
-	} else {
-		console.log(parseInt(a) + parseInt(b));
-	}
+function add (a, b) {
+  if (isNaN(a) || isNaN(b)) {
+    console.log('NaN');
+  } else {
+    console.log(parseInt(a) + parseInt(b));
+  }
 }
 
 const args = process.argv.slice(2);

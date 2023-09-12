@@ -1,10 +1,9 @@
 #!/usr/bin/node
 
 if (process.argv.length <= 2) {
-	console.log(0);
+  console.log(0);
 } else {
-
-	const args = process.argv.slice(2);
-	args.sort((a, b) => b - a);
-	console.log(args[1]);
+  const args = process.argv.slice(2);
+  args.sort((a, b) => b - a);
+  console.log(args[1]);
 }
