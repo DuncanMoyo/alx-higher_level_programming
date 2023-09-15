@@ -9,6 +9,9 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """
+    Retrieve all rows in table 'states'
+    """
     db = MySQLdb.connect(host="localhost",
             user=sys.argv[1],
             passwd=sys.argv[2],
