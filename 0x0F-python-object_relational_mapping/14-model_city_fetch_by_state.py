@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Prints all City objects from the database hbtn_0e_14_usa sorted in ascending order by cities.id
+Prints all City objects from the database hbtn_0e_14_usa sorted in
+ascending order by cities.id
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
