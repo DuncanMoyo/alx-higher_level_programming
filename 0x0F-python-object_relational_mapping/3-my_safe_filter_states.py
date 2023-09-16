@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # Executes the SQL query to retrieve all states starting with N
     cur = db.cursor()
     arg = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s", (arg,))
+    cur.execute("SELECT * FROM states WHERE name LIKE %s", (arg,))
 
     # Prints the results in the format specified in the prompt
     for row in cur.fetchall():
