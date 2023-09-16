@@ -7,6 +7,7 @@ takes in an argument and displays all values in the states table of hbtn_0e_0_us
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
     # Connects to the MySQL server running on localhost at port 3306
     db = MySQLdb.connect(host="localhost",
