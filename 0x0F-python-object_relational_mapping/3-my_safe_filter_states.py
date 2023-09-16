@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
+takes in an argument and displays all values in the states table of
+hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
@@ -18,7 +19,8 @@ if __name__ == "__main__":
 
     # Executes the SQL query to retrieve all states starting with N
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC", (sys.argv[4],))
+    arg = sys.argv[4]
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s", (arg,))
 
     # Prints the results in the format specified in the prompt
     for row in cur.fetchall():
