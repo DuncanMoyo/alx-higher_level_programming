@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa
+takes in the name of a state as an argument and lists all cities of
+that state, using the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -17,7 +18,9 @@ if __name__ == "__main__":
 
     # Executes the SQL query to retrieve all cities of the given state
     cur = db.cursor()
-    cur.execute("SELECT * FROM cities WHERE state_id IN (SELECT id FROM states WHERE name=%s) ORDER BY id ASC", (sys.argv[4],))
+     cur.execute("""SELECT cities.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
+                WHERE states.name=%s""", (sys.argv[4],))
 
     # Prints the results in the format specified in the prompt
     print(", ".join([row[2] for row in cur.fetchall()]))
