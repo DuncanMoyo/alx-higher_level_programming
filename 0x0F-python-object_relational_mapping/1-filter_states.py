@@ -16,7 +16,7 @@ if __name__ == "__main__":
             port=3306)
     # Executes the SQL query to retrieve all states starting with N
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id")
     # Prints the results in the format specified in the prompt
     for row in cur.fetchall():
         print(row)
