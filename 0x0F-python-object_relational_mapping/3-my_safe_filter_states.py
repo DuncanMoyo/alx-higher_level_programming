@@ -8,6 +8,7 @@ hbtn_0e_0_usa where name matches the argument.
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
     # Connects to the MySQL server running on localhost at port 3306
     db = MySQLdb.connect(host="localhost",
