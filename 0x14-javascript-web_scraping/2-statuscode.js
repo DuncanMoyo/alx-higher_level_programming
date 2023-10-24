@@ -3,7 +3,7 @@
 const request = require('request');
 const process = require('process');
 
-let url = process.argv[2];
+const url = process.argv[2];
 
 request(url, function (error, response, body) {
   if (error) {
@@ -12,4 +12,3 @@ request(url, function (error, response, body) {
     console.log('code:', response && response.statusCode);
   }
 });
-
